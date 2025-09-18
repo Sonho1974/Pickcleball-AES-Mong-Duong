@@ -1,104 +1,175 @@
- <!doctype html>
-<div class="sponsor">Anh Dương</div>
-</div>
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Giải Pickleball CLB AES Mông Dương - Tháng 9/2025</title>
+  <style>
+    :root {
+      --bg:#f6f8fb; --card:#ffffff; --muted:#6b7280; --accent:#0f766e; --accent-2:#06b6d4;
+      --shadow: 0 6px 20px rgba(15,23,42,0.08);
+      --radius:12px; --maxw:980px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    * { box-sizing:border-box }
+    body {
+      margin:0;
+      background:linear-gradient(180deg,#f8fafc 0%,var(--bg) 100%);
+      color:#0f172a;
+      display:flex;
+      justify-content:center;
+      padding:28px
+    }
+    .wrap { width:100%; max-width:var(--maxw) }
 
+    header.hero {
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:26px;
+      display:flex;
+      gap:18px;
+      align-items:center;
+      margin-bottom:18px
+    }
+    .logo {
+      width:84px;height:84px;border-radius:10px;flex:0 0 84px;
+      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;align-items:center;justify-content:center;
+      color:white;font-weight:700;font-size:20px
+    }
+    .hero h1 { margin:0;font-size:20px }
+    .hero p { margin:6px 0 0;color:var(--muted) }
 
-<p class="muted">Giải Pickleball CLB AES Mông Dương Tháng 9/2025 đã khép lại, nhưng tinh thần thể thao, sự gắn kết và niềm vui lan tỏa chắc chắn sẽ còn được duy trì và phát triển trong thời gian tới.</p>
-</section>
+    .card {
+      background:var(--card);border-radius:12px;
+      padding:20px;box-shadow:var(--shadow);margin-bottom:14px
+    }
+    .lead { color:var(--muted);line-height:1.6 }
 
+    .grid { display:grid;grid-template-columns:1fr 320px;gap:18px }
+    @media (max-width:900px) { .grid{grid-template-columns:1fr} }
 
-<!-- ENGLISH CONTENT -->
-<section data-lang="en" style="display:none">
-<p><strong>AES Mong Duong Pickleball Club Tournament – September 2025</strong> — As part of the Wellbeing Month 2025, the AES Mong Duong Pickleball Club successfully organized the September 2025 Internal Pickleball Tournament, with enthusiastic participation from many athletes and lively support from the audience. This annual event aims to promote health, reduce stress, and create a meaningful playground that strengthens the bond among Company members.</p>
+    .section-title { display:flex;align-items:center;gap:10px;margin-bottom:12px }
+    .section-title h2 { margin:0;font-size:18px }
+    .badge {
+      background:#e6fffa;color:#044e46;padding:6px 10px;
+      border-radius:999px;font-weight:600;font-size:13px
+    }
 
+    .results { display:grid;grid-template-columns:1fr 1fr;gap:12px }
+    @media (max-width:700px){.results{grid-template-columns:1fr}}
+    .podium {
+      padding:14px;border-radius:10px;
+      background:linear-gradient(180deg,#ffffff,#f8fafc);
+      border:1px solid rgba(15,23,42,0.03)
+    }
+    .podium h3 { margin:0 0 10px }
+    .podium ul { margin:0;padding:0;list-style:none }
+    .podium li {
+      padding:8px 0;border-top:1px dashed rgba(15,23,42,0.04);
+      display:flex;align-items:center;gap:8px
+    }
+    .medal {
+      width:36px;height:36px;border-radius:8px;background:#111827;
+      color:white;display:inline-grid;place-items:center;font-weight:700
+    }
+    .medal.gold { background:linear-gradient(90deg,#f59e0b,#f97316) }
+    .medal.silver { background:linear-gradient(90deg,#9ca3af,#6b7280) }
+    .medal.bronze { background:linear-gradient(90deg,#efb4a8,#f97316) }
 
-<h2>Vibrant Atmosphere – Exciting Matches</h2>
-<p>The tournament took place on September 16–17, 2025, at the Housing Pickleball courts and Cau Den courts, attracting more than 50 athletes competing in two categories:</p>
-<ul>
-<li>Men’s Doubles 4.5 Level</li>
-<li>Men’s Doubles 3.5 Prospective Level</li>
-</ul>
-<p>With a group-stage and knockout format, the tournament featured thrilling and competitive matches, showcasing true “Fair Play” spirit.</p>
+    .sponsors { display:flex;flex-wrap:wrap;gap:10px;margin-top:10px }
+    .sponsor {
+      background:#f3f4f6;padding:8px 12px;border-radius:8px;
+      font-weight:600
+    }
 
+    footer.note { margin-top:12px;color:var(--muted);font-size:13px }
 
-<h2>Impressive Results</h2>
-<div class="grid">
-<div>
-<h3>• Men’s Doubles 3.5 Level</h3>
-<div class="result-list">
-<div class="highlight">🏆 <strong>Champion:</strong> Pham Van Tung – Do Hung Dung</div>
-<div class="highlight">🥈 <strong>Runner-up:</strong> Pham Van Cham – Pham Thanh Hai</div>
-<div class="highlight">🥉 <strong>Third Place (shared):</strong> Duong Thuc Son – Nguyen Trong Dat<br>and Pham Van Thang – Ngo Quy Ngoc</div>
-</div>
-</div>
-<div>
-<h3>• Men’s Doubles 4.5 Level</h3>
-<div class="result-list">
-<div class="highlight">🏆 <strong>Champion:</strong> Pham Van Tung – Le Van Khoe</div>
-<div class="highlight">🥈 <strong>Runner-up:</strong> Hoang Van Duong – Do Tri Kien</div>
-<div class="highlight">🥉 <strong>Third Place (shared):</strong> Nguyen Xuan Lap – Tran Huy Hung<br>and Phung Duc Bac – Phung Duc Anh Hai</div>
-</div>
-</div>
-</div>
+    /* small helper styles */
+    .muted{color:var(--muted)}
+    .inline-list{display:flex;gap:8px;flex-wrap:wrap}
+    .cta{
+      display:inline-block;background:var(--accent);color:white;
+      padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="logo">AES</div>
+      <div class="hero-copy">
+        <h1>Giải Pickleball CLB AES Mông Dương — Tháng 9/2025</h1>
+        <p class="muted">Thành công rực rỡ, lan tỏa tinh thần gắn kết • Tin tức ngày 18 tháng 9 năm 2025</p>
+      </div>
+    </header>
 
+    <div class="grid">
+      <main>
+        <article class="card">
+          <div class="section-title">
+            <span class="badge">Wellbeing 2025</span>
+            <h2>Giải Pickleball CLB AES Mông Dương: Thành công rực rỡ, lan tỏa tinh thần gắn kết</h2>
+          </div>
 
-<h2>A Memorable Event of Connection</h2>
-<p>Beyond being a sports competition, the tournament was an opportunity for club members to exchange experiences, improve techniques and strategies, and raise overall playing standards. The enthusiastic cheers from the audience further fueled the excitement, turning every match into an unforgettable moment.</p>
+          <p class="lead">Trong khuôn khổ Tháng hành động Wellbeing 2025, Câu lạc bộ Pickleball AES Mông Dương đã tổ chức Giải Pickleball nội bộ tháng 9/2025 với sự tham gia nhiệt tình của đông đảo vận động viên và sự cổ vũ sôi nổi của khán giả. Đây là hoạt động thường niên nhằm nâng cao sức khỏe, giảm căng thẳng, đồng thời tạo sân chơi bổ ích, gắn kết các thành viên trong Công ty.</p>
 
+          <h3>Không khí sôi nổi – Trận đấu kịch tính</h3>
+          <p>Giải đấu diễn ra trong hai ngày <strong>16 và 17/9/2025</strong> tại cụm sân Pickleball Housing và sân Cầu Đen, thu hút hơn <strong>50 vận động viên</strong> tham gia ở hai nội dung:</p>
+          <ul>
+            <li>Đôi nam trình 4.5</li>
+            <li>Đôi nam trình triển vọng 3.5</li>
+          </ul>
+          <p class="lead">Các trận đấu được tổ chức với thể thức vòng bảng – loại trực tiếp, mang đến những màn so tài hấp dẫn, kịch tính và đầy tinh thần “Fairplay”.</p>
 
-<p>After the awarding ceremony, the Organizing Committee hosted a closing celebration party, creating a cheerful and bonding atmosphere that wrapped up the tournament with lasting memories.</p>
+          <div style="height:12px"></div>
 
+          <div class="section-title"><h2>Kết quả thi đấu ấn tượng</h2></div>
 
-<h2>Words of Appreciation</h2>
-<p>The Organizing Committee would like to sincerely thank all athletes and supporters for their dedication to the tournament. Special appreciation goes to our generous sponsors:</p>
-<div class="sponsors">
-<div class="sponsor">Ms. Hong (HR)</div>
-<div class="sponsor">Mr. Lap</div>
-<div class="sponsor">Mr. Hung</div>
-<div class="sponsor">Mr. Ninh</div>
-<div class="sponsor">Ms. Minh (CSR)</div>
-<div class="sponsor">Mr. Cong</div>
-<div class="sponsor">Mr. Duong</div>
-</div>
+          <div class="results">
+            <div class="podium">
+              <h3>Nội dung Trình 3.5</h3>
+              <ul>
+                <li><span class="medal gold">🏆</span> <strong>Nhất:</strong> Phạm Văn Tùng – Đỗ Hùng Dũng</li>
+                <li><span class="medal silver">🥈</span> <strong>Nhì:</strong> Phạm Văn Châm – Phạm Thanh Hải</li>
+                <li><span class="medal bronze">🥉</span> <strong>Đồng Hạng Ba:</strong> Dương Thúc Sơn – Nguyễn Trọng Đạt</li>
+                <li><span class="medal bronze">🥉</span> <strong>Đồng Hạng Ba:</strong> Phạm Văn Thăng – Ngô Quý Ngọc</li>
+              </ul>
+            </div>
 
+            <div class="podium">
+              <h3>Nội dung Trình 4.5</h3>
+              <ul>
+                <li><span class="medal gold">🏆</span> <strong>Nhất:</strong> Phạm Văn Tùng – Lê Văn Khỏe</li>
+                <li><span class="medal silver">🥈</span> <strong>Nhì:</strong> Hoàng Văn Dương – Đỗ Trí Kiên</li>
+                <li><span class="medal bronze">🥉</span> <strong>Đồng Hạng Ba:</strong> Nguyễn Xuân Lập – Trần Huy Hùng</li>
+                <li><span class="medal bronze">🥉</span> <strong>Đồng Hạng Ba:</strong> Phùng Đức Bắc – Phùng Đức Anh Hải</li>
+              </ul>
+            </div>
+          </div>
 
-<p class="muted">The AES Mong Duong Pickleball Club September 2025 Tournament has come to a close, but the sporting spirit, connection, and joy it created will surely continue to grow in the future.</p>
-</section>
+          <h3 style="margin-top:16px">Sự kiện gắn kết – Dấu ấn khó quên</h3>
+          <p class="lead">Không chỉ là sân chơi thể thao, giải đấu còn là dịp để các thành viên trong CLB giao lưu, học hỏi kỹ thuật và chiến thuật thi đấu, từ đó nâng cao trình độ chung. Đặc biệt, sự cổ vũ nhiệt tình từ các cổ động viên đã tiếp thêm động lực, giúp các trận đấu trở nên bùng nổ và giàu cảm xúc.</p>
 
+          <p class="lead">Sau phần trao giải, BTC đã tổ chức liên hoan tổng kết trong bầu không khí vui tươi, gắn kết – khép lại giải đấu với nhiều kỷ niệm đẹp.</p>
 
-</main>
+          <h3>Lời cảm ơn</h3>
+          <p>Ban Tổ chức xin gửi lời cảm ơn chân thành đến toàn thể VĐV, cổ động viên đã đồng hành cùng giải đấu. Đặc biệt, xin tri ân sự hỗ trợ quý báu từ các nhà tài trợ:</p>
+          <div class="sponsors">
+            <div class="sponsor">Chị Hồng (HR)</div>
+            <div class="sponsor">Anh Lập</div>
+            <div class="sponsor">Anh Hùng</div>
+            <div class="sponsor">Anh Ninh</div>
+            <div class="sponsor">Chị Minh (CSR)</div>
+            <div class="sponsor">Anh Công</div>
+            <div class="sponsor">Anh Dương</div>
+          </div>
+          <p class="lead" style="margin-top:12px">Giải Pickleball CLB AES Mông Dương Tháng 9/2025 đã khép lại, nhưng tinh thần thể thao, sự gắn kết và niềm vui lan tỏa chắc chắn sẽ còn được duy trì và phát triển trong thời gian tới.</p>
+        </article>
+      </main>
+    </div>
 
-
-<footer>
-<small>Prepared by AES Mong Duong Pickleball Club • September 2025</small>
-</footer>
-</div>
-</div>
-
-
-<script>
-function toggleLanguage(){
-const en = document.querySelector('section[data-lang="en"]');
-const vi = document.querySelector('section[data-lang="vi"]');
-const btn = document.getElementById('langBtn');
-if(en.style.display === 'none'){
-en.style.display = '';
-vi.style.display = 'none';
-btn.textContent = 'Xem Tiếng Việt';
-} else {
-en.style.display = 'none';
-vi.style.display = '';
-btn.textContent = 'Xem English';
-}
-}
-function printArticle(){
-window.print();
-}
-function copyURL(){
-const url = window.location.href;
-navigator.clipboard?.writeText(url).then(()=>{alert('Liên kết đã sao chép!')}).catch(()=>{prompt('Sao chép liên kết này:',url)});
-}
-</script>
+     </div>
 </body>
 </html>
-      
