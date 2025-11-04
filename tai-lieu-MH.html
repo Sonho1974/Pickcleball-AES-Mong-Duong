@@ -6,82 +6,89 @@
 <title>Tài liệu vận hành MH</title>
 <style>
     body {
-        font-family: Arial, sans-serif;
-        background: #f3f4f6;
-        margin: 0;
-        padding: 40px;
-        text-align: center;
-    }
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    padding: 40px;
+    text-align: center;
+}
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 30px;
-    }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
 
-    h1 {
-        color: #1f2937;
-        margin: 0 auto;
-        text-align: center;
-        flex: 1;
-    }
+h1 {
+    color: #1f2937;
+    margin: 0 auto;
+    text-align: center;
+    flex: 1;
+    font-size: 32px;
+}
 
-    .home-btn {
-        background-color: #2563eb;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 16px;
-        font-weight: bold;
-        transition: background-color 0.3s;
-    }
+.home-btn {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
 
-    .home-btn:hover {
-        background-color: #1d4ed8;
-    }
+.home-btn:hover {
+    background-color: #1d4ed8;
+}
 
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        justify-items: center;
-    }
+/* Lưới tài liệu: 4 cột, khoảng cách rộng hơn */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;              /* tăng khoảng cách giữa các ô */
+    justify-items: center;
+}
 
-    .doc-item {
-        background: white;
-        border-radius: 12px;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-        width: 220px;
-        height: 160px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
+/* Từng ô tài liệu */
+.doc-item {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    width: 260px;           /* tăng chiều rộng */
+    height: 200px;          /* tăng chiều cao */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
 
-    .doc-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 10px rgba(0,0,0,0.15);
-    }
+.doc-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+}
 
-    .doc-icon {
-        font-size: 48px;
-        color: #2563eb;
-        margin-bottom: 10px;
-    }
+/* Icon tài liệu */
+.doc-icon {
+    font-size: 60px;        /* to hơn */
+    color: #2563eb;
+    margin-bottom: 12px;
+}
 
-    .doc-title {
-        font-weight: bold;
-        color: #111827;
-        font-size: 15px;
-        text-align: center;
-        padding: 0 10px;
-    }
+/* Tiêu đề tài liệu */
+.doc-title {
+    font-weight: bold;
+    color: #111827;
+    font-size: 17px;
+    text-align: center;
+    padding: 0 12px;
+    line-height: 1.3;
+}
+
 </style>
 </head>
 <body>
