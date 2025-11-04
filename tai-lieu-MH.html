@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tài liệu vận hành MH</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f3f4f6;
+        margin: 0;
+        padding: 40px;
+        text-align: center;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        color: #1f2937;
+        margin: 0 auto;
+        text-align: center;
+        flex: 1;
+    }
+
+    .home-btn {
+        background-color: #2563eb;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+    }
+
+    .home-btn:hover {
+        background-color: #1d4ed8;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .doc-item {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        width: 220px;
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .doc-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 10px rgba(0,0,0,0.15);
+    }
+
+    .doc-icon {
+        font-size: 48px;
+        color: #2563eb;
+        margin-bottom: 10px;
+    }
+
+    .doc-title {
+        font-weight: bold;
+        color: #111827;
+        font-size: 15px;
+        text-align: center;
+        padding: 0 10px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <button class="home-btn" onclick="goHome()">🏠 Trang chủ</button>
+    <h1>Tài liệu vận hành MH</h1>
+    <div style="width:120px"></div> <!-- để căn giữa tiêu đề -->
+</header>
+
+<div class="grid-container">
+    <div class="doc-item" onclick="openDoc('docs/Manual1.pdf')">
+        <div class="doc-icon">📘</div>
+        <div class="doc-title">Hướng dẫn vận hành Lò hơi</div>
+    </div>
+    <div class="doc-item" onclick="openDoc('docs/Manual2.pdf')">
+        <div class="doc-icon">📗</div>
+        <div class="doc-title">Hướng dẫn vận hành Tuabin</div>
+    </div>
+    <div class="doc-item" onclick="openDoc('docs/Manual3.pdf')">
+        <div class="doc-icon">📕</div>
+        <div class="doc-title">Hệ thống nước làm mát</div>
+    </div>
+    <div class="doc-item" onclick="openDoc('docs/Manual4.pdf')">
+        <div class="doc-icon">📙</div>
+        <div class="doc-title">Hệ thống điều khiển</div>
+    </div>
+    <!-- Thêm các tài liệu khác -->
+</div>
+
+<script>
+function openDoc(url) {
+    const pass = prompt("Nhập mật khẩu để xem tài liệu:");
+    if (pass === "123654") {
+        window.open(url, '_blank');
+    } else if (pass !== null) {
+        alert("Sai mật khẩu!");
+    }
+}
+
+function goHome() {
+    // Đổi 'index.html' thành trang chủ thật của bạn nếu khác
+    window.location.href = 'index.html';
+}
+</script>
+
+</body>
+</html>
