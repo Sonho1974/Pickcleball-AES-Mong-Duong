@@ -1,0 +1,27 @@
+<div style="font-family: Arial; font-size: 14px; color: #333;">
+    <h2 style="color: #0057D9;">Báo cáo công việc hàng ngày</h2>
+
+    <p>Xin chào <strong style="color:#D9534F;">@{triggerOutputs()?['headers']['x-ms-file-last-modified-by']}</strong>,</p>
+
+    <p>Dưới đây là báo cáo công việc được gửi từ hệ thống Power Apps:</p>
+
+    <table style="border-collapse: collapse; width: 100%; margin-top: 10px;">
+        <tr>
+            <th style="border: 1px solid #999; padding: 8px; background: #f2f2f2;">Hạng mục</th>
+            <th style="border: 1px solid #999; padding: 8px; background: #f2f2f2;">Nội dung</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #999; padding: 8px;">Công việc 1</td>
+            <td style="border: 1px solid #999; padding: 8px;">@{variables('Task1')}</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #999; padding: 8px;">Công việc 2</td>
+            <td style="border: 1px solid #999; padding: 8px;">@{variables('Task2')}</td>
+        </tr>
+    </table>
+
+    <p style="margin-top: 20px;">
+        Trân trọng,<br>
+        <span style="font-weight: bold; color:#0057D9;">Hệ thống Power Apps</span>
+    </p>
+</div>
