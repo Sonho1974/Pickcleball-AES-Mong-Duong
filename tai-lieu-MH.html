@@ -4,31 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tài liệu vận hành MH</title>
+
 <style>
-    body {
+body {
     font-family: Arial, sans-serif;
     background: #f3f4f6;
     margin: 0;
     padding: 40px;
-    text-align: center;
 }
 
+/* Header */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 40px;
-}
-
-h1 {
-    color: #1f2937;
-    margin: 0 auto;
-    text-align: center;
-    flex: 1;
-    font-size: 32px;
+    position: relative;
 }
 
 .home-btn {
+    position: absolute;
+    left: 0;
     background-color: #2563eb;
     color: white;
     border: none;
@@ -37,34 +33,39 @@ h1 {
     cursor: pointer;
     font-size: 17px;
     font-weight: bold;
-    transition: background-color 0.3s;
 }
 
 .home-btn:hover {
     background-color: #1d4ed8;
 }
 
-/* Lưới tài liệu: 4 cột, khoảng cách rộng hơn */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 40px;              /* tăng khoảng cách giữa các ô */
-    justify-items: center;
+h1 {
+    color: #1f2937;
+    font-size: 32px;
 }
 
-/* Từng ô tài liệu */
+/* GRID: 6 cột */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin-bottom: 60px;
+}
+
+/* Khối tài liệu */
 .doc-item {
     background: white;
     border-radius: 16px;
-    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
-    width: 260px;           /* tăng chiều rộng */
-    height: 200px;          /* tăng chiều cao */
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    width: 220px;
+    height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: transform 0.25s, box-shadow 0.25s;
+    transition: 0.25s;
 }
 
 .doc-item:hover {
@@ -72,182 +73,171 @@ h1 {
     box-shadow: 0 8px 18px rgba(0,0,0,0.18);
 }
 
-/* Icon tài liệu */
 .doc-icon {
-    font-size: 60px;        /* to hơn */
+    font-size: 55px;
     color: #2563eb;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-/* Tiêu đề tài liệu */
 .doc-title {
     font-weight: bold;
-    color: #111827;
-    font-size: 17px;
     text-align: center;
-    padding: 0 12px;
-    line-height: 1.3;
+    font-size: 15px;
+    padding: 0 10px;
 }
-
 </style>
 </head>
+
 <body>
 
+<!-- PHẦN 1: TÀI LIỆU VẬN HÀNH MH -->
 <header>
     <button class="home-btn" onclick="goHome()">🏠 Trang chủ</button>
     <h1>Tài liệu vận hành MH</h1>
-    <div style="width:120px"></div> <!-- để căn giữa tiêu đề -->
 </header>
 
 <div class="grid-container">
+
     <div class="doc-item" onclick="openDoc('Bản vẽ cơ khí khu vực MH.pdf')">
         <div class="doc-icon">📘</div>
-        <div class="doc-title">BẢN VẼ CƠ KHÍ KHU VỰC MATERIAL HANDLING</div>
-    </div>
-    <div class="doc-item" onclick="openDoc('MDPCL-OMH-SOP-01-003 Portal Scraper Reclaimer.pdf')">
-        <div class="doc-icon">📗</div>
-        <div class="doc-title">Hướng dẫn vận hành máy cào than Reclaimer</div>
-    </div>
-    <div class="doc-item" onclick="openDoc('MDPCL-OMH-SOP-01-004 Reclaimer Dust Suppression System.pdf')">
-        <div class="doc-icon">📕</div>
-        <div class="doc-title">Hệ thống nước phun nước dập bụi của máy cào than</div>
-    </div>
-    <div class="doc-item" onclick="openDoc('MDPCL-OMH-SOP-01-005 CHS Dust Suppression System.pdf')">
-        <div class="doc-icon">📙</div>
-        <div class="doc-title">Hệ thống nước phun nước dập bụi</div>
+        <div class="doc-title">BẢN VẼ CƠ KHÍ KHU VỰC MH</div>
     </div>
 
-     <div class="doc-item" onclick="openDoc('MDPCL-OMH-SOP-01-007 CHS Fire Protection System.pdf')">
+    <div class="doc-item" onclick="openDoc('MDPCL-OMH-SOP-01-003 Portal Scraper Reclaimer.pdf')">
+        <div class="doc-icon">📗</div>
+        <div class="doc-title">Hướng dẫn vận hành Reclaimer</div>
+    </div>
+
+    <div class="doc-item" onclick="openDoc('MDPCL-OMH-SOP-01-004 Reclaimer Dust Suppression System.pdf')">
+        <div class="doc-icon">📕</div>
+        <div class="doc-title">Hệ thống phun nước dập bụi Reclaimer</div>
+    </div>
+
+    <div class="doc-item" onclick="openDoc('MDPCL-OMH-SOP-01-005 CHS Dust Suppression System.pdf')">
+        <div class="doc-icon">📙</div>
+        <div class="doc-title">Hệ thống phun nước dập bụi</div>
+    </div>
+
+    <div class="doc-item" onclick="openDoc('MDPCL-OMH-SOP-01-007 CHS Fire Protection System.pdf')">
         <div class="doc-icon">📘</div>
         <div class="doc-title">Hệ thống cứu hỏa khu vực MH</div>
     </div>
 
     <div class="doc-item" onclick="openDoc('MDPCL-OMH-SOP-01-008 Coal Handling System.pdf')">
         <div class="doc-icon">📗</div>
-        <div class="doc-title">Hướng dẫn vận hành hệ thống nhận và cấp than</div>
+        <div class="doc-title">Hướng dẫn vận hành hệ thống nhận & cấp than</div>
     </div>
 
-      <div class="doc-item" onclick="openDoc('MDPCL-OMH-SOP-01-011 - MH building HVAC & FA Rev1.pdf')">
+    <div class="doc-item" onclick="openDoc('MDPCL-OMH-SOP-01-011 - MH building HVAC & FA Rev1.pdf')">
         <div class="doc-icon">📕</div>
-        <div class="doc-title">Hệ thống điều hòa khu vực MH</div>
+        <div class="doc-title">Hệ thống điều hòa MH</div>
     </div>
 
- <div class="doc-item" onclick="openDoc('MDPCL-OMH-SOP-01-012-HOUSEKEEPING IN MATERIAL HANDLING AREA.pdf')">
+    <div class="doc-item" onclick="openDoc('MDPCL-OMH-SOP-01-012-HOUSEKEEPING IN MATERIAL HANDLING AREA.pdf')">
         <div class="doc-icon">📙</div>
         <div class="doc-title">Quản lý vệ sinh khu vực MH</div>
     </div>
 
- <div class="doc-item" onclick="openDoc('MDPCL-OMH-TSOP-01-001 - TR02AB.pdf')">
+    <div class="doc-item" onclick="openDoc('MDPCL-OMH-TSOP-01-001 - TR02AB.pdf')">
         <div class="doc-icon">📘</div>
-        <div class="doc-title">Quy trình quản lý tạm thời khi có sự cố Tripper Car 2A/2B </div>
+        <div class="doc-title">Quy trình tạm thời Tripper Car 2A/2B</div>
     </div>
 
     <div class="doc-item" onclick="openDoc('Quy trình sàng lọc 5S và quản lý tài sản.pdf')">
         <div class="doc-icon">📗</div>
-        <div class="doc-title">Quy trình sàng lọc 5S và quản lý tài sản</div>
+        <div class="doc-title">Quy trình sàng lọc 5S & quản lý tài sản</div>
     </div>
 
-     <div class="doc-item" onclick="openDoc('Sổ tay 5S.pdf')">
+    <div class="doc-item" onclick="openDoc('Sổ tay 5S.pdf')">
         <div class="doc-icon">📕</div>
         <div class="doc-title">Sổ tay 5S</div>
     </div>
 
-
-     <div class="doc-item" onclick="openDoc('Tiêu chuẩn Layout.pdf')">
+    <div class="doc-item" onclick="openDoc('Tiêu chuẩn Layout.pdf')">
         <div class="doc-icon">📙</div>
         <div class="doc-title">Tiêu chuẩn Layout</div>
     </div>
 
-   <header>
+</div>
+
+<!-- PHẦN 2: AMS -->
+<header>
     <button class="home-btn" onclick="goHome()">🏠 Trang chủ</button>
     <h1>Tài liệu QUẢN LÝ TÀI SẢN AMS</h1>
-    <div style="width:120px"></div> <!-- để căn giữa tiêu đề -->
 </header>
 
-    <div class="grid-container">
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-018 Maintenance Quality Control Procedure Rev.0 - 18 Sep 2024 - Vietnamese.pdf')">
+<div class="grid-container">
+
+    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-018 Maintenance Quality Control Procedure.pdf')">
         <div class="doc-icon">📘</div>
-        <div class="doc-title">QUY TRÌNH KIỂM SOÁT CHẤT LƯỢNG BẢO TRÌ</div>
+        <div class="doc-title">KIỂM SOÁT CHẤT LƯỢNG BẢO TRÌ</div>
     </div>
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-003 Capital Expenditure Procedure Rev.2 - 09 Feb 2025 - Vietnamese.pdf')">
+
+    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-003 Capital Expenditure Procedure.pdf')">
         <div class="doc-icon">📗</div>
-        <div class="doc-title">QUY TRÌNH CHI PHÍ TÀI SẢN CỐ ĐỊNH</div>
+        <div class="doc-title">CHI PHÍ TÀI SẢN CỐ ĐỊNH</div>
     </div>
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-004 Operations Management Procedure Rev.3 - 1 Feb 2023 - Vietnamese.pdf')">
+
+    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-004 Operations Management Procedure.pdf')">
         <div class="doc-icon">📕</div>
-        <div class="doc-title">QUY TRÌNH QUẢN LÝ VẬN HÀNH</div>
+        <div class="doc-title">QUẢN LÝ VẬN HÀNH</div>
     </div>
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-005 Maintenance Management Procedure Rev.4 - 02 Jun 2025 - Vietnamese.pdf')">
+
+    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-005 Maintenance Management Procedure.pdf')">
         <div class="doc-icon">📙</div>
-        <div class="doc-title">QUY TRÌNH QUẢN LÝ BẢO TRÌ</div>
+        <div class="doc-title">QUẢN LÝ BẢO TRÌ</div>
+    </div>
 
-
-        <div class="grid-container">
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-006 Risk Management Procedure Rev.1 - 20 Apr 2020 - Vietnamese.pdf')">
+    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-006 Risk Management Procedure.pdf')">
         <div class="doc-icon">📘</div>
-        <div class="doc-title">QUY TRÌNH QUẢN LÝ RỦI RO</div>
+        <div class="doc-title">QUẢN LÝ RỦI RO</div>
     </div>
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-007 Performance Monitoring Procedure Rev.1 - 20 Apr 2020 - Vietnamese.pdf')">
+
+    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-007 Performance Monitoring.pdf')">
         <div class="doc-icon">📗</div>
-        <div class="doc-title">QUY TRÌNH GIÁM SÁT HIỆU SUẤT</div>
+        <div class="doc-title">GIÁM SÁT HIỆU SUẤT</div>
     </div>
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-008 Root Cause Analysis Procedure Rev.2 - 16 Jan 2023 - Vietnamese.pdf')">
+
+    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-008 Root Cause Analysis.pdf')">
         <div class="doc-icon">📕</div>
-        <div class="doc-title">QUY TRÌNH PHÂN TÍCH NGUYÊN NHÂN GỐC</div>
+        <div class="doc-title">PHÂN TÍCH NGUYÊN NHÂN GỐC</div>
     </div>
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-009 Continuous Improvement Procedure Rev.2 - 20 May 2025 - Vietnamese.pdf')">
+
+    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-009 Continuous Improvement.pdf')">
         <div class="doc-icon">📙</div>
-        <div class="doc-title">QUY TRÌNH CẢI TIẾN LIÊN TỤC</div>
+        <div class="doc-title">CẢI TIẾN LIÊN TỤC</div>
+    </div>
 
-
-        <div class="grid-container">
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-010 Learrning and Development Procedure Rev.2 - 20 Apr 2020 - Vietnamese.pdf')">
+    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-010 Learning & Development.pdf')">
         <div class="doc-icon">📘</div>
-        <div class="doc-title">QUY TRÌNH HỌC TẬP VÀ PHÁT TRIỂN</div>
+        <div class="doc-title">HỌC TẬP & PHÁT TRIỂN</div>
     </div>
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-011 Document Management Procedure Rev.2 - 20 Apr 2020 - Vietnamese.pdf')">
+
+    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-011 Document Management.pdf')">
         <div class="doc-icon">📗</div>
-        <div class="doc-title">QUY TRÌNH QUẢN LÝ TÀI LIỆU</div>
+        <div class="doc-title">QUẢN LÝ TÀI LIỆU</div>
     </div>
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-013 Supply Chain Management Procedure Rev.5 - 08 Apr 2025 - Vietnamese.pdf')">
+
+    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-013 Supply Chain.pdf')">
         <div class="doc-icon">📕</div>
-        <div class="doc-title">QUY TRÌNH QUẢN LÝ CHUỖI CUNG ỨNG</div>
+        <div class="doc-title">QUẢN LÝ CHUỖI CUNG ỨNG</div>
     </div>
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-014 Life Cycle Value Management Rev.1 - 20 Apr 2020 - Vietnamese.pdf')">
+
+    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-014 Life Cycle Value.pdf')">
         <div class="doc-icon">📙</div>
-        <div class="doc-title">QUẢN LÝ GIÁ TRỊ VÒNG ĐỜI</div>
+        <div class="doc-title">GIÁ TRỊ VÒNG ĐỜI</div>
+    </div>
 
-
-        <div class="grid-container">
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-015 Asset Lending Procedure Rev.0 - 27 May 2021 - Vietnamese.pdf')">
-        <div class="doc-icon">📘</div>
-        <div class="doc-title">QUY TRÌNH CHO MƯỢN TÀI SẢN</div>
-    </div>
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-015 Business Continuity Plan Rev.3  -15 Mar 2024 - Vietnamese.pdf')">
-        <div class="doc-icon">📗</div>
-        <div class="doc-title">KẾ HOẠCH KINH DOANH LIÊN TỤC</div>
-    </div>
-    <div class="doc-item" onclick="openDoc('AES-MD-AMS-SP-017 Staff Housing Colony Management Procedure Rev.0 - 08 Apr 2022 - Vietnamese.pdf')">
-        <div class="doc-icon">📕</div>
-        <div class="doc-title">QUY TRÌNH QUẢN LÝ KHU NHÀ Ở NHÂN VIÊN</div>
-    </div>
- 
-    
-    <!-- Thêm các tài liệu khác -->
 </div>
 
 <script>
 function openDoc(url) {
     const pass = prompt("Nhập mật khẩu để xem tài liệu:");
-    if (pass === "1006") {
-        window.open(url, '_blank');
-    } else if (pass !== null) {
-        alert("Sai mật khẩu!");
-    }
+    if (pass === "1006") window.open(url, '_blank');
+    else if (pass !== null) alert("Sai mật khẩu!");
 }
 
 function goHome() {
-    // Đổi 'index.html' thành trang chủ thật của bạn nếu khác
     window.location.href = 'index.html';
 }
 </script>
